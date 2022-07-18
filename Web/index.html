@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web section</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function Clock(){
+            date = new Date();
+            year = date.getFullYear();
+            month = date.getMonth() + 1;
+            day = date.getDate();
+            hours = date.getHours()
+            minutes = date.getMinutes();
+            seconds = date.getSeconds()
+            milisec = date.getMilliseconds()
+
+            var cur_date = month +"/"+ day +"/"+ year +" "+ hours +":"+ minutes +":"+ seconds +"."+ milisec;
+            document.getElementById("current_date").innerHTML = cur_date;
+
+            setTimeout("Clock()", 100);
+        }
+    </script>
+</head>
+<body onload="Clock()">
+    <br>
+    <t1>El tiempo actual es:</t1>
+    <br>
+    <p id="current_date"></p>
+</body>
+</html>
